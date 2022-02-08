@@ -500,6 +500,9 @@
     #division-news .cat-title .link {
         margin-right: 27px;
     }
+    h3#reply-title {
+        width: 75%;
+    }
     /* footer */
     .footer-top {
         padding: 0 9%;

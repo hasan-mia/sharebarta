@@ -772,7 +772,7 @@ div#sports-left {
     width: 2px;
     background: green;
     border-left-style: dashed;
-    border-left-color: #d0463c;
+    border-left-color: #c01f13;
 }
 
 #top-three .box-style .box-left img {
@@ -1913,14 +1913,14 @@ input#author {
 }
 
 input#email {
-    width: 45%;
+    width: 78%;
 }
 
 input#submit {
     background: #c4302b;
     color: #fff;
     padding: 8px 20px 8px 20px;
-    width: 63%;
+    width: 76%;
 }
 
 h3#reply-title a {
