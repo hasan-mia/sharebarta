@@ -1,0 +1,101 @@
+  <!--==== ======================
+            Start Gallery Section
+      ==============================-->
+      <section class="container my-2">
+        <div class="row" id="gallery">
+          <div class="col-md-12 col-sm-12 col-12">
+            <div class="cat-title-down">
+              <h1> ফটো গ্যালারি </h1>
+            </div>
+        		<div class="row">
+              <?php
+               // the query
+               $the_category = new WP_Query( array(
+                 'category_name' => 'ছবি-গ্যালারি',
+                  'posts_per_page' => 1,
+
+               ));
+              if($the_category->have_posts()):
+               while ($the_category->have_posts() ):$the_category->the_post();
+               // $gallery[] = $post->ID;
+               // ===========Get Image Link===========
+                $featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full');
+
+               ?>
+
+              <div class="col-lg-5 col-md-5 col-12 thumb" id="first-img">
+                  <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="<?php the_title();?>"
+                     data-image="<?php echo esc_url($featured_img_url) ?>"
+                     data-target="#image-gallery">
+                      <img class="img-thumbnail"
+                           src="<?php echo esc_url($featured_img_url) ?>"
+                           alt="<?php the_title();?>">
+                           <i class="fa fa-camera" aria-hidden=""></i>
+
+                  </a>
+              </div>
+              <?php endwhile;  endif; wp_reset_postdata();?>
+              <!-- end 1st column -->
+
+              <div class="col-lg-7 col-md-7 col-12">
+                  <div class="row">
+                    <?php
+                     // the query
+                     $the_category = new WP_Query( array(
+                       'category_name' => 'ছবি-গ্যালারি',
+                        'posts_per_page' => 6,
+                        'offset' => 1,
+
+                     ));
+                    if($the_category->have_posts()):
+                     while ($the_category->have_posts() ):$the_category->the_post();
+                     // $gallery[] = $post->ID;
+                     // ===========Get Image Link===========
+                      $featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'400x200');
+
+                     ?>
+                    <div class="col-lg-4 col-md-4 col-12 thumb" id="second-img">
+                        <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="<?php the_title();?>"
+                           data-image="<?php echo esc_url($featured_img_url) ?>"
+                           data-target="#image-gallery">
+                            <img class="img-thumbnail"
+                                 src="<?php echo esc_url($featured_img_url) ?>"
+                                 alt="<?php the_title();?>">
+                                 <i class="fa fa-camera" aria-hidden=""></i>
+                        </a>
+                    </div>
+                    <?php endwhile;  endif; wp_reset_postdata();?>
+                    <!-- end 2nd column -->
+
+                  </div>
+                  <!-- end row -->
+              </div>
+              <!-- end 2nd column -->
+
+             </div>
+
+                <div class="modal fade" id="image-gallery" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title" id="image-gallery-title"></h4>
+                                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <img id="image-gallery-image" class="img-responsive col-md-12" src="">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary float-left" id="show-previous-image"><i class="fas fa-angle-left"></i>
+                                </button>
+
+                                <button type="button" id="show-next-image" class="btn btn-secondary float-right"><i class="fas fa-angle-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+        	</div>
+      </section>
+      <!-- End Gallery -->

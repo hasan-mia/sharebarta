@@ -1,0 +1,94 @@
+/*
+Theme Name: Share Barta
+Theme URI: https://hasanmia.com/sharebarta
+Author: Hasan
+Author URI: http://hasanmia.com
+Description: Share Barta is the online Newspaper paper theme in Bangladesh.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: sharebarta
+Tags: one-column, two-columns, right-sidebar, flexible-header, accessibility-ready, custom-colors, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+1.0 Normalize
+2.0 Accessibility
+3.0 Alignments
+4.0 Clearings
+5.0 Typography
+6.0 Forms
+7.0 Formatting
+8.0 Lists
+9.0 Tables
+10.0 Links
+11.0 Featured Image Hover
+12.0 Navigation
+13.0 Layout
+   13.1 Header
+   13.2 Front Page
+   13.3 Regular Content
+   13.4 Posts
+   13.5 Pages
+   13.6 Footer
+14.0 Comments
+15.0 Widgets
+16.0 Media
+   16.1 Galleries
+17.0 Customizer
+18.0 SVGs Fallbacks
+19.0 Media Queries
+20.0 Print
+--------------------------------------------------------------
+// Header Social
+<nav class="header-nav">
+<ul>
+<li> <a href="#"> <i class="fab fa-facebook"></i></a></li>
+<li> <a href="#"> <i class="fab fa-twitter-square"></i></a></li>
+<li> <a href="#"> <i class="fab fa-youtube-square"></i></a></li>
+<li> <a href="#"> <i class="fab fa-instagram"></i></a></li>
+<li> <a href="#"> <i class="fas fa-rss"></i></a></li>
+</ul>
+</nav>
+
+  <!--------Footer Section Widget---------->
+     <div class="col-md-3 col-sm-12 col-12">
+          <?php dynamic_sidebar('footer-first');?>
+      </div>
+
+      <div class="col-md-3 col-sm-12 col-12">
+          <?php dynamic_sidebar('footer-secound');?>
+      </div>
+
+      <div class="col-md-3 col-sm-12 col-12">
+          <?php dynamic_sidebar('footer-third');?>
+      </div>
+
+      <div class="col-md-3 col-sm-12 col-12">
+          <?php dynamic_sidebar('footer-fourth');?>
+      </div>
+
+<h1>
+	প্রকাশক ও সম্পাদক: মো: রাসেল
+</h1>
+
+<p>
+	নির্বাহী সম্পাদক : ফাতিমা জাহান, ব্যবস্থাপনা সম্পাদক : মো: সুজানুর রহমান
+</p>
+
+<p>
+বার্তা ও বানিজ্যিক কার্যালয় : আরএস ভবন (৩য় তলা), ১২০/এ, মতিঝিল বা/এ, ঢাকা - ১০০০।	
+</p>
+
+<p>
+ E-mail: deshprotikhon@gmail.com, web: deshprotikhon.com
+</p>
+
+Copyright © 2014-2022 sharebarta24.com
+--------------------------------------------------------------*/
