@@ -2048,11 +2048,6 @@ p.comment-form-comment label {
     text-decoration: none;
 }
 
-.content h2 {
-    min-width: 266px;
-    font-size: 15px;
-}
-
 .cat-lead-news .main-content img {
     height: 350px;
     width: 100%;
@@ -2061,12 +2056,11 @@ p.comment-form-comment label {
 .cat-lead-news .content img {
     height: 165px;
     width: 100%;
-    margin-left: -10px;
+    margin-bottom: 10px;
 }
 
 .cat-lead-news .content h2 a {
-    margin-left: -10px;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .cat-lead-news h2 a {
