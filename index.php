@@ -515,9 +515,6 @@
 
               </div>
               <!--  end column -->
-              <!-- <div class="col-md-4 col-sm-12 col-12">>
-              
-              </div> -->
               <div>
                 <!-- row -->
               </div>
