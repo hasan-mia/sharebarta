@@ -51,10 +51,10 @@
         padding-top: 0;
     }
     .head-date {
-        margin-top: 0px!important;
+        margin-top: -15px!important;
     }
     .head-date p {
-        font-size: 22px;
+        font-size: 16px;
     }
     .header-social {
         padding-top: 0;
@@ -160,8 +160,9 @@
         width: 100%!important;
     }
     #lead-sec-right {
-        width: 99%;
-        /* padding-left: 2%; */
+        position: relative;
+        width: 102%;
+        right: 0.5rem;
     }
     .home-page-ads {
         margin-right: 0;
@@ -226,7 +227,14 @@
         margin-right: 0!important;
     }
     #ads {
-        padding: 5px 0 0 20px;
+        padding: 0 0px;
+        left: 0.5rem;
+    }
+    #price-sensitive-part #ads {
+        padding: 5px 0 0 0;
+    }
+    .category-sec #ads {
+        padding: 5px 0 0 15px!important;
     }
     #price-sensitive-part .px-3 {
         margin-left: 0!important;
@@ -237,6 +245,9 @@
     .last-cat .cat-title h1 {
         width: 227%;
         margin-left: 1px;
+    }
+    #cat-sec-right {
+        padding: 0 0;
     }
     .tab-bar {
         width: 100%;
