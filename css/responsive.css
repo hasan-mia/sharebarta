@@ -27,6 +27,16 @@
 }
 
 @media only screen and (max-width: 767px) {
+    /* .navbar {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    } */
+    .navbar-brand img {
+        width: 8rem;
+        border-radius: 15px;
+    }
     nav.header-nav {
         top: -5px;
     }

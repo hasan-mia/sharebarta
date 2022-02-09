@@ -13,17 +13,6 @@
      }?>
  </title>
 <?php wp_head(); ?>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-83736502-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-83736502-1');
-</script>
-
-
 </head>
 
 <body <?php body_class(); ?>>
@@ -62,14 +51,7 @@
           <div class="head-date">
             <p>
               <?php
-
-              //  echo 'আজ: '. bn_date(date('l, d M Y')). 'ইং,'. do_shortcode(' [bangla_date]'). ','. do_shortcode(' [hijri_date]');
-  
-              // echo ' <i class="fas fa-map-marker-alt"></i> '. 'ঢাকা '. '<i class="fas fa-calendar-alt"></i>'. bn_date(date(' l, d M Y')). 'ইং, '. BDdate(time()) . ' বঙ্গাব্দ';
-              
               echo ' <i class="fas fa-map-marker-alt"></i> '. 'ঢাকা '. '<i class="fas fa-calendar-alt"></i>'. bn_date(date(' l, d M Y'));
-
-            
               ?>
             </p>
           </div>
@@ -88,11 +70,16 @@
   </section>
   <header class="sticky-top">
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">
+        <span class="navbar-brand">
         <?php
+          if ( has_custom_logo() ) {
+            the_custom_logo();
+          }
+          else {
             echo '<h1>'. get_bloginfo( 'name' ) .'</h1>';
-            ?>
-        </a>
+          }
+        ?>
+        </span>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="fa fa-bars fa-2x"></span>
         </button>
