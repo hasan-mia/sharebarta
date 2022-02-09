@@ -16,19 +16,6 @@
 
 /* Mobile Device */
 
-@media only screen and (max-width: 375px) {
-    h3#reply-title,
-    textarea#comment {
-        width: 75%!important;
-    }
-    input#submit {
-        width: 75%!important;
-    }
-    #price-sensitive-part #ads {
-        padding: 5px 10px 0 0;
-    }
-}
-
 @media only screen and (max-width: 767px) {
     /* .navbar {
         display: flex;
@@ -345,6 +332,22 @@
     }
     .footer-widget h1 {
         font-size: 25px;
+    }
+}
+
+
+/* Very Small Device */
+
+@media only screen and (max-width: 375px) {
+    h3#reply-title,
+    textarea#comment {
+        width: 75%!important;
+    }
+    input#submit {
+        width: 75%!important;
+    }
+    #price-sensitive-part #ads {
+        padding: 5px 10px 0 0;
     }
 }
 
