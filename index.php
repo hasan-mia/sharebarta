@@ -59,7 +59,7 @@
                       <i class="fas fa-arrow-right"></i> 
                       <a class="author-name" href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ), get_the_author_meta( 'user_nicename' ) ); ?>"><?php the_author(); ?> :</a>
                     </span> 
-                      <?php echo wp_trim_words( get_the_content(), 10,);?>
+                      <?php echo wp_trim_words( get_the_content(), 10);?>
                     </p>              
                   </div>
               <div class="box-left">
