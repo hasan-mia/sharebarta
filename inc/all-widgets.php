@@ -28,13 +28,13 @@ register_sidebar( array(
   // ) );
   // ========Epaper Sidebar======
 
-  // register_sidebar( array(
-  //   'name'          => __( 'Home Page Sidebar', 'textdomain' ),
-  //   'id'            => 'home-sidebar',
-  //   'description'   => __( 'Customize Your Home Page Right Sidebar...', 'textdomain' ),
-  //   'before_widget' => '<div class="main-sidebar my-3">',
-  //   'after_widget'  => '</div>',
-  // ) );
+  register_sidebar( array(
+    'name'          => __( 'Home Page Sidebar', 'textdomain' ),
+    'id'            => 'home-sidebar',
+    'description'   => __( 'Customize Your Home Page Right Sidebar...', 'textdomain' ),
+    'before_widget' => '<div class="main-sidebar my-3">',
+    'after_widget'  => '</div>',
+  ) );
   // ========Home Page Right Sidebar======
 
   register_sidebar( array(
