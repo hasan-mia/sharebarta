@@ -24,6 +24,9 @@
     input#submit {
         width: 75%!important;
     }
+    #price-sensitive-part #ads {
+        padding: 5px 10px 0 0;
+    }
 }
 
 @media only screen and (max-width: 767px) {
