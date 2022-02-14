@@ -719,7 +719,7 @@ div#sports-left {
     overflow: hidden;
     display: flex;
     align-items: center;
-    border: 1px solid #ece8e8;
+    border-bottom: 1px solid #0b665d;
     margin: 10px 0;
 }
 
@@ -769,10 +769,10 @@ div#sports-left {
     position: absolute;
     content: "";
     height: 85%;
-    width: 2px;
-    background: green;
-    border-left-style: dashed;
-    border-left-color: #c01f13;
+    width: 3px;
+    background: #0b665d;
+    /* border-left-style: dashed;
+    border-left-color: #c01f13 */
 }
 
 #top-three .box-style .box-left img {
@@ -1710,7 +1710,7 @@ ul.list-inline a {
 
 .one-right-two .secound-content img {
     width: 100%;
-    height: 230px;
+    height: 200px;
 }
 
 .epaper {

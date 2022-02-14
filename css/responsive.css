@@ -80,6 +80,13 @@
         float: right!important;
         padding-right: 10px;
     }
+    #top-three .box-style {
+        margin: 10px 0;
+        width: 109%;
+        position: relative;
+        right: 0.7rem;
+        margin: 5px 0;
+    }
     /* end top three */
     .first-content img,
     #lead-img img,
