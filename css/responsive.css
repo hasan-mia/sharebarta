@@ -87,6 +87,10 @@
         right: 0.7rem;
         margin: 5px 0;
     }
+    #top-three .box-style .box-left img {
+        height: 140px;
+        width: 100%;
+    }
     /* end top three */
     .first-content img,
     #lead-img img,
@@ -399,7 +403,7 @@
         border-right: 0px!important;
     }
     #top-three {
-        padding-right: 13px;
+        margin: 0 1.7rem 0 0.5rem;
     }
     #lead-sec {
         padding-right: 2%;

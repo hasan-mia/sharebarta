@@ -765,14 +765,16 @@ div#sports-left {
     color: green;
 }
 
+#top-three .container {
+    background: #d8edde;
+}
+
 #top-three .box-style::before {
     position: absolute;
     content: "";
     height: 85%;
     width: 3px;
     background: #0b665d;
-    /* border-left-style: dashed;
-    border-left-color: #c01f13 */
 }
 
 #top-three .box-style .box-left img {

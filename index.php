@@ -9,12 +9,12 @@
   <!-- =====================
         highlights Ads
    ========================= -->
-  
-   <div class="col-md-12 col-sm-12 col-12">
-        <!-- Start Ads -->
-        <div class="pl-2 pr-4">
-          <div class="row">
-            <?php
+
+  <div class="col-md-12 col-sm-12 col-12">
+    <!-- Start Ads -->
+    <div class="pl-2 pr-4">
+      <div class="row">
+        <?php
                   // the query
                   $the_category = new WP_Query( array(
                     'post_type' => 'ads',
@@ -25,21 +25,21 @@
                     'type' => 'top-three',
                   ));
                   ?>
-            <?php if ( $the_category->have_posts()) : ?>
-            <?php while ( $the_category->have_posts() ) : $the_category->the_post(); ?>
-            <?php $url= get_post_meta($post->ID, 'ads-link', true); ?>
-            <div class="col-md-4 col-sm-12 col-12" id="ads">
-              <a href="<?php echo esc_url($url) ?>" target="_blank"><?php the_post_thumbnail();?></a>
-            </div>
-            <?php endwhile; endif; wp_reset_postdata();?>
-          </div>
+        <?php if ( $the_category->have_posts()) : ?>
+        <?php while ( $the_category->have_posts() ) : $the_category->the_post(); ?>
+        <?php $url= get_post_meta($post->ID, 'ads-link', true); ?>
+        <div class="col-md-4 col-sm-12 col-12" id="ads">
+          <a href="<?php echo esc_url($url) ?>" target="_blank"><?php the_post_thumbnail();?></a>
         </div>
-        <!-- end ads -->
+        <?php endwhile; endif; wp_reset_postdata();?>
       </div>
-    <section id="top-three">
-      <div class="container">
-        <div class="row">
-          <?php
+    </div>
+    <!-- end ads -->
+  </div>
+  <section id="top-three">
+    <div class="container">
+      <div class="row">
+        <?php
          $related = new WP_Query(array(
            'category_name' => 'top-three',
            'posts_per_page' => 3,
@@ -47,36 +47,38 @@
              ));
              ?>
 
-          <?php if ( $related->have_posts() ) : ?>
-          <?php while ( $related->have_posts() ) : $related->the_post(); ?>
-          <div class="col-md-4 col-sm-12 col-12">
-            <div class="box-style">
-              <div class="box-right">
-                <h2><a href="<?php the_permalink(); ?>"
-                    title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
-                    <p>
-                    <span> 
-                      <i class="fas fa-arrow-right"></i> 
-                      <a class="author-name" href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ), get_the_author_meta( 'user_nicename' ) ); ?>"><?php the_author(); ?> :</a>
-                    </span> 
-                      <?php echo wp_trim_words( get_the_content(), 10);?>
-                    </p>              
-                  </div>
-              <div class="box-left">
-                <?php the_post_thumbnail();?>
-              </div>
+        <?php if ( $related->have_posts() ) : ?>
+        <?php while ( $related->have_posts() ) : $related->the_post(); ?>
+        <div class="col-md-4 col-sm-12 col-12">
+          <div class="box-style">
+            <div class="box-right">
+              <h2><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
+              </h2>
+              <p>
+                <span>
+                  <i class="fas fa-arrow-right"></i>
+                  <a class="author-name"
+                    href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ), get_the_author_meta( 'user_nicename' ) ); ?>"><?php the_author(); ?>
+                    :</a>
+                </span>
+                <?php echo wp_trim_words( get_the_content(), 10);?>
+              </p>
+            </div>
+            <div class="box-left">
+              <?php the_post_thumbnail();?>
             </div>
           </div>
-          <!-- end column-->
-          <?php  endwhile; else : endif;wp_reset_postdata(); ?>
         </div>
-        <!--end row-->
-        <div>
-    </section>
-    <!-- end top three -->
+        <!-- end column-->
+        <?php  endwhile; else : endif;wp_reset_postdata(); ?>
+      </div>
+      <!--end row-->
+      <div>
+  </section>
+  <!-- end top three -->
 
-    <!-- ====Uniq Custom Null Lead News Query=== -->
-    <?php
+  <!-- ====Uniq Custom Null Lead News Query=== -->
+  <?php
       // the query
       $lead_news = new WP_Query( array(
         'category_name' => 'main-news',
@@ -91,9 +93,9 @@
        }
       
     ?>
-    <!-- End custom uniq Query -->
-    <!-- Lead Section -->
-    <!-- ========Body Part======= -->
+  <!-- End custom uniq Query -->
+  <!-- Lead Section -->
+  <!-- ========Body Part======= -->
   <section>
     <div class="lead-sec">
       <div class="row">
@@ -117,7 +119,7 @@
                 <div class="first-content" id="lead-img">
                   <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail();?></a>
                   <h2><a href="<?php the_permalink(); ?>"> <?php the_title(); ?></a></h2>
-                  <p><?php echo wp_trim_words( get_the_content(), 35, '...' );?> </p>
+                  <p><?php echo wp_trim_words( get_the_content(), 20, '...' );?> </p>
                 </div>
 
                 <?php endwhile; endif; wp_reset_postdata();?>
@@ -222,7 +224,7 @@
         <!-- end lead middle col -->
 
         <div class="col-lg-3 col-md-12 col-12">
-          <div class="one-bottom-box" id="lead-sec-right">
+          <div class="one-bottom-box my-1" id="lead-sec-right">
             <div class="row">
               <div class="col-lg-12 col-md-12 col-sm-12 col-12" id="soft-back">
 
@@ -441,7 +443,7 @@
                      // the query
                      $the_category = new WP_Query( array(
                        'category_name' => 'company-news',
-                        'posts_per_page' => 8,
+                        'posts_per_page' => 9,
                         'offset' => 2,
                         'post__not_in'  =>  $lead,
                      ));
@@ -500,8 +502,8 @@
                         // the query
                         $the_category = new WP_Query( array(
                           'category_name' => 'share-market',
-                            'posts_per_page' => 15,
-                            'offset' => 1,
+                            'posts_per_page' => 12,
+                            'offset' => 0,
                             'post__not_in'  =>  $lead,
                         ));
                         if($the_category->have_posts()):
@@ -598,7 +600,7 @@
                         <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail();?></a>
                         <h2><a href="<?php the_permalink(); ?>"
                             title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
-                        <p><?php echo wp_trim_words( get_the_content(), 35, '...' );?></p>
+                        <p><?php echo wp_trim_words( get_the_content(), 45, '...' );?></p>
                       </div>
                       <?php endwhile;  endif; wp_reset_postdata();?>
                     </div>
@@ -786,7 +788,7 @@
                         <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail();?></a>
                         <h2><a href="<?php the_permalink(); ?>"
                             title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
-                        <p><?php echo wp_trim_words( get_the_content(), 35, '...' );?></p>
+                        <p><?php echo wp_trim_words( get_the_content(), 45, '...' );?></p>
                       </div>
                       <?php endwhile;  endif; wp_reset_postdata();?>
                     </div>
