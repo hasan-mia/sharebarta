@@ -87,6 +87,11 @@
         right: 0.7rem;
         margin: 5px 0;
     }
+    #top-three .box-style::before {
+        height: 75%;
+        bottom: 1rem;
+        right: 0rem;
+    }
     #top-three .box-style .box-left img {
         height: 140px;
         width: 100%;
@@ -238,7 +243,7 @@
         margin-right: 0!important;
     }
     #ads {
-        padding: 0 0px;
+        padding: 3px 0;
         left: 0.5rem;
     }
     #price-sensitive-part #ads {

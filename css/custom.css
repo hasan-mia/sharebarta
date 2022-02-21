@@ -767,18 +767,26 @@ div#sports-left {
 
 #top-three .container {
     background: #d8edde;
+    border-bottom: 2px solid #0b665d;
+}
+
+#top-three .box-style {
+    border-bottom: 0px!important;
 }
 
 #top-three .box-style::before {
     position: absolute;
     content: "";
-    height: 85%;
+    height: 70%;
     width: 3px;
     background: #0b665d;
+    bottom: 2rem;
+    right: 1rem;
 }
 
 #top-three .box-style .box-left img {
-    height: 115px;
+    height: 110px;
+    width: 100%;
 }
 
 #top-three .box-right {
