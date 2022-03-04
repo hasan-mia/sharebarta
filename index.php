@@ -1,6 +1,4 @@
 <?php get_header(); ?>
-
-<!--<div class="oo9gr5id" dir="auto" style="text-align: center;"><span style="color: rgb(243, 121, 52);"><strong>প্রিয় পাঠক আপনাদের দেশপ্রতিক্ষণ ওয়েবসাইটের ডিজাইন পরিবর্তন ও আপডেটের কাজ চলছে। সাময়িক অসুবিধার জন্য আন্তরিক ভাবে দুঃখিত।</strong></span></div> -->
 <!-- =======================
         Main Body Section
     ======================== -->
@@ -10,9 +8,9 @@
         highlights Ads
    ========================= -->
 
-  <div class="col-md-12 col-sm-12 col-12">
+  <div class="col-md-12 col-sm-12 col-12 gx">
     <!-- Start Ads -->
-    <div class="pl-2 pr-4">
+    <div class="pb-2">
       <div class="row">
         <?php
                   // the query
@@ -28,7 +26,7 @@
         <?php if ( $the_category->have_posts()) : ?>
         <?php while ( $the_category->have_posts() ) : $the_category->the_post(); ?>
         <?php $url= get_post_meta($post->ID, 'ads-link', true); ?>
-        <div class="col-md-4 col-sm-12 col-12" id="ads">
+        <div class="col-md-4 col-sm-12 col-12">
           <a href="<?php echo esc_url($url) ?>" target="_blank"><?php the_post_thumbnail();?></a>
         </div>
         <?php endwhile; endif; wp_reset_postdata();?>
@@ -118,8 +116,10 @@
                 <?php  $lead[] = $post->ID; ?>
                 <div class="first-content" id="lead-img">
                   <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail();?></a>
+                  <div class="bg">
                   <h2><a href="<?php the_permalink(); ?>"> <?php the_title(); ?></a></h2>
                   <p><?php echo wp_trim_words( get_the_content(), 20, '...' );?> </p>
+                  </div>
                 </div>
 
                 <?php endwhile; endif; wp_reset_postdata();?>
@@ -131,11 +131,10 @@
           </div>
           <!-- End Main lead News -->
 
-          <div class="row">
-
+          <div class="row ml-2 mt-1" id="lead-sec-bottom">
             <div class="col-lg-6 col-md-6 col-sm-12 col-12">
               <!-- Start One-Bottom-Box -->
-              <div class="one-bottom-box" id="lead-sec-bottom">
+              <div class="one-bottom-box">
                 <!-- Start Cat First Content -->
                 <div class="row">
                   <div class="col-md-12 col-sm-12 col-12">
@@ -177,7 +176,7 @@
 
             <div class="col-lg-6 col-md-6 col-sm-12 col-12">
               <!-- Start One-Bottom-Box -->
-              <div class="one-bottom-box" id="lead-sec-bottom">
+              <div class="one-bottom-box">
                 <!-- Start Cat First Content -->
                 <div class="row">
                   <div class="col-md-12 col-sm-12 col-12">
@@ -226,7 +225,7 @@
         <div class="col-lg-3 col-md-12 col-12">
           <div class="one-bottom-box my-1" id="lead-sec-right">
             <div class="row">
-              <div class="col-lg-12 col-md-12 col-sm-12 col-12" id="soft-back">
+              <div class="col-lg-12 col-md-12 col-sm-12 col-12">
 
                 <?php
                     // the query
@@ -240,7 +239,7 @@
                     while ($the_category->have_posts() ):$the_category->the_post();
                     ?>
                 <?php  $slider4[] = $post->ID; ?>
-                <div class="box-style mar-right">
+                <div class="box-style">
 
                   <div class="box-left">
                     <h2><a href="<?php the_permalink(); ?>"
@@ -274,9 +273,9 @@
   ============================-->
   <section id="price-sensitive-part">
     <div class="row">
-      <div class="col-md-12 col-sm-12 col-12 price-sensitive-part">
+      <div class="col-md-12 col-sm-12 col-12">
         <!-- Start Ads -->
-        <div class="pl-3 pr-3 py-2">
+        <div class="px-1 py-2">
           <div class="row">
             <?php
                   // the query
@@ -292,7 +291,7 @@
             <?php if ( $the_category->have_posts()) : ?>
             <?php while ( $the_category->have_posts() ) : $the_category->the_post(); ?>
             <?php $url= get_post_meta($post->ID, 'ads-link', true); ?>
-            <div class="col-md-4 col-sm-12 col-12" id="ads">
+            <div class="col-md-4 col-sm-12 col-12">
               <a href="<?php echo esc_url($url) ?>" target="_blank"><?php the_post_thumbnail();?></a>
             </div>
             <?php endwhile; endif; wp_reset_postdata();?>
@@ -302,7 +301,7 @@
       </div>
       <!-- end ads column -->
       <div class="col-md-12 col-sm-12 col-12">
-        <div class="one-right-two" id="mbl-left">
+        <div class="one-right-two">
           <div class="content-body">
             <!-- Satrt Category Title -->
             <div class="cat-title">
@@ -361,9 +360,9 @@
 
         <!--============ Start Category section =============-->
         <section class="category-sec">
-          <div class="one-right-two my-2" id="mbl-left">
+          <div class="one-right-two my-2">
             <!-- Start Ads -->
-            <div class="pr-4 py-2">
+            <div class="px-1 py-2">
               <div class="row">
                 <?php
                   // the query
@@ -379,7 +378,7 @@
                 <?php if ( $the_category->have_posts()) : ?>
                 <?php while ( $the_category->have_posts() ) : $the_category->the_post(); ?>
                 <?php $url= get_post_meta($post->ID, 'ads-link', true); ?>
-                <div class="col-md-4 col-sm-12 col-12" id="ads">
+                <div class="col-md-4 col-sm-12 col-12">
                   <a href="<?php echo esc_url($url) ?>" target="_blank"><?php the_post_thumbnail();?></a>
                 </div>
                 <?php endwhile; endif; wp_reset_postdata();?>
@@ -417,7 +416,7 @@
                   </div>
                   <!-- End cat title -->
                   <div class="row">
-                    <div class="col-lg-6 col-md-12 col-sm-12 col-12 my-2">
+                    <div class="col-lg-8 col-md-12 col-sm-12 col-12 my-2">
                       <?php
                    // the query
                    $the_category = new WP_Query( array(
@@ -433,12 +432,12 @@
                         <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail();?></a>
                         <h2><a href="<?php the_permalink(); ?>"
                             title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
-                        <p><?php echo wp_trim_words( get_the_content(), 25, '...' );?></p>
+                        <p><?php echo wp_trim_words( get_the_content(), 45, '...' );?></p>
                       </div>
                       <?php endwhile;  endif; wp_reset_postdata();?>
                     </div>
                     <!-- End Column -->
-                    <div class="col-lg-6 col-md-12 col-sm-12 col-12">
+                    <div class="col-lg-4 col-md-12 col-sm-12 col-12">
                       <?php
                      // the query
                      $the_category = new WP_Query( array(
@@ -472,10 +471,10 @@
               <div class="col-lg-4 col-md-12 col-sm-12 col-12">
                 <!-- Satrt Category Title -->
                 <div class="cat-title">
-                  <div class="title mx-1">
-                    <h1> পুজিবাজারের সর্বশেষ খবর </h1>
+                  <div class="title">
+                    <h1> পুঁজিবাজারের সর্বশেষ খবর </h1>
                   </div>
-                  <div class="link mx-3">
+                  <div class="link">
                     <?php
                       // the query
                       $the_category = new WP_Query( array(
@@ -526,9 +525,9 @@
 
         <!--============ Start Category section =============-->
         <section class="category-sec">
-          <div class="one-right-two my-2" id="mbl-left">
+          <div class="one-right-two my-2">
             <!-- Start Ads -->
-            <div class="pr-4 py-2">
+            <div class="px-1 py-2">
               <div class="row">
                 <?php
                   // the query
@@ -544,7 +543,7 @@
                 <?php if ( $the_category->have_posts()) : ?>
                 <?php while ( $the_category->have_posts() ) : $the_category->the_post(); ?>
                 <?php $url= get_post_meta($post->ID, 'ads-link', true); ?>
-                <div class="col-md-4 col-sm-12 col-12" id="ads">
+                <div class="col-md-4 col-sm-12 col-12">
                   <a href="<?php echo esc_url($url) ?>" target="_blank"><?php the_post_thumbnail();?></a>
                 </div>
                 <?php endwhile; endif; wp_reset_postdata();?>
@@ -584,7 +583,7 @@
                   </div>
                   <!-- End cat title -->
                   <div class="row">
-                    <div class="col-lg-6 col-md-6 col-sm-12 col-12 my-2">
+                    <div class="col-lg-8 col-md-6 col-sm-12 col-12 my-2">
                       <?php
                    // the query
                    $the_category = new WP_Query( array(
@@ -600,12 +599,12 @@
                         <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail();?></a>
                         <h2><a href="<?php the_permalink(); ?>"
                             title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
-                        <p><?php echo wp_trim_words( get_the_content(), 45, '...' );?></p>
+                        <p><?php echo wp_trim_words( get_the_content(), 75, '...' );?></p>
                       </div>
                       <?php endwhile;  endif; wp_reset_postdata();?>
                     </div>
                     <!-- End Column -->
-                    <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                    <div class="col-lg-4 col-md-6 col-sm-12 col-12">
                       <?php
                      // the query
                      $the_category = new WP_Query( array(
@@ -639,10 +638,10 @@
               <div class="col-lg-4 col-md-12 col-sm-12 col-12">
                 <!-- Satrt Category Title -->
                 <div class="cat-title">
-                  <div class="title mx-1">
+                  <div class="title">
                     <h1> বিনোদন </h1>
                   </div>
-                  <div class="link mx-3">
+                  <div class="link">
                     <?php
                       // the query
                       $the_category = new WP_Query( array(
@@ -668,7 +667,7 @@
                 <!-- End cat title -->
                 <div class="one-bottom-box" id="cat-sec-right">
                   <div class="row">
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-12" id="soft-back">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-12">
 
                       <?php
                     // the query
@@ -682,7 +681,7 @@
                     while ($the_category->have_posts() ):$the_category->the_post();
                     ?>
                       <?php  $slider4[] = $post->ID; ?>
-                      <div class="box-style mar-right">
+                      <div class="box-style">
 
                         <div class="box-left">
                           <h2><a href="<?php the_permalink(); ?>"
@@ -716,9 +715,9 @@
 
         <!--============ Start Category section =============-->
         <section class="category-sec">
-          <div class="one-right-two my-2" id="mbl-left">
+          <div class="one-right-two my-2">
             <!-- Start Ads -->
-            <div class="pr-4 py-2">
+            <div class="px-1 py-2">
               <div class="row">
                 <?php
                   // the query
@@ -734,7 +733,7 @@
                 <?php if ( $the_category->have_posts()) : ?>
                 <?php while ( $the_category->have_posts() ) : $the_category->the_post(); ?>
                 <?php $url= get_post_meta($post->ID, 'ads-link', true); ?>
-                <div class="col-md-4 col-sm-12 col-12" id="ads">
+                <div class="col-md-4 col-sm-12 col-12">
                   <a href="<?php echo esc_url($url) ?>" target="_blank"><?php the_post_thumbnail();?></a>
                 </div>
                 <?php endwhile; endif; wp_reset_postdata();?>
@@ -772,7 +771,7 @@
                   </div>
                   <!-- End cat title -->
                   <div class="row">
-                    <div class="col-md-6 col-sm-12 col-12 my-2">
+                    <div class="col-md-8 col-sm-12 col-12 my-2">
                       <?php
                         // the query
                         $the_category = new WP_Query( array(
@@ -788,12 +787,12 @@
                         <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail();?></a>
                         <h2><a href="<?php the_permalink(); ?>"
                             title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
-                        <p><?php echo wp_trim_words( get_the_content(), 45, '...' );?></p>
+                        <p><?php echo wp_trim_words( get_the_content(), 55, '...' );?></p>
                       </div>
                       <?php endwhile;  endif; wp_reset_postdata();?>
                     </div>
                     <!-- End Column -->
-                    <div class="col-md-6 col-sm-12 col-12">
+                    <div class="col-md-4 col-sm-12 col-12">
                       <?php
                      // the query
                      $the_category = new WP_Query( array(
@@ -827,10 +826,10 @@
               <div class="col-lg-4 col-md-12 col-sm-12 col-12">
                 <!-- Satrt Category Title -->
                 <div class="cat-title">
-                  <div class="title mx-1">
+                  <div class="title">
                     <h1> সোশ্যাল মিডিয়া </h1>
                   </div>
-                  <div class="link mx-3">
+                  <div class="link">
                     <?php
                       // the query
                       $the_category = new WP_Query( array(
@@ -855,7 +854,7 @@
                 <!-- End cat title -->
                 <div class="one-bottom-box" id="cat-sec-right">
                   <div class="row">
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-12" id="soft-back">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-12">
 
                       <?php
                     // the query
@@ -869,7 +868,7 @@
                     while ($the_category->have_posts() ):$the_category->the_post();
                     ?>
                       <?php  $slider4[] = $post->ID; ?>
-                      <div class="box-style mar-right">
+                      <div class="box-style">
 
                         <div class="box-left">
                           <h2><a href="<?php the_permalink(); ?>"
