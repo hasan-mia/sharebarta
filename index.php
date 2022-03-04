@@ -131,7 +131,7 @@
           </div>
           <!-- End Main lead News -->
 
-          <div class="row ml-2 mt-1" id="lead-sec-bottom">
+          <div class="row ml-md-2 mt-1" id="lead-sec-bottom">
             <div class="col-lg-6 col-md-6 col-sm-12 col-12">
               <!-- Start One-Bottom-Box -->
               <div class="one-bottom-box">
